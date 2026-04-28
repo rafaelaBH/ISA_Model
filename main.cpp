@@ -22,21 +22,21 @@ Unit GetUnit(const string& header);
 double ConvertToKm(double h, Unit unit);
 void RunTest(const string& filename, const string& outfile);
 
-#define BASE_TROPOSPHERE_TEMP 15
-#define LAPSE_TROPOSPHERE 6.5
+constexpr double BASE_TROPOSPHERE_TEMP = 15.0;
+constexpr double LAPSE_TROPOSPHERE = 6.5;
 
-#define BASE_TROPOPAUSE_TEMP (-56.5)
-#define TROPOPAUSE_START_POINT 11
+constexpr double BASE_TROPOPAUSE_TEMP = -56.5;
+constexpr double TROPOPAUSE_START_POINT = 11.0;
 
-#define BASE_STRATOSPHERE_TEMP (-56.5)
-#define BASE_STRATOSPHERE_HEIGHT 20
-#define LAPSE_STRATOSPHERE 1
-#define STRATOSPHERE_START_POINT 20
+constexpr double BASE_STRATOSPHERE_TEMP = -56.5;
+constexpr double BASE_STRATOSPHERE_HEIGHT = 20.0;
+constexpr double LAPSE_STRATOSPHERE = 1.0;
+constexpr double STRATOSPHERE_START_POINT = 20.0;
 
-#define FEET_TO_KM 0.0003048
-#define METERS_TO_KM 1000.0
+constexpr double FEET_TO_KM = 0.0003048;
+constexpr double METERS_TO_KM = 1000.0;
 
-#define HEIGHT_UPPER_BOUND_KM 25
+constexpr double HEIGHT_UPPER_BOUND_KM = 25.0;
 
 int main() {
     RunTest("../Test_1.txt", "../test1.csv");
