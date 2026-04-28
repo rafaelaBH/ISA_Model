@@ -36,6 +36,8 @@ void RunTest(const string& filename, const string& outfile);
 #define FEET_TO_KM 0.0003048
 #define METERS_TO_KM 1000.0
 
+#define HEIGHT_UPPER_BOUND_KM 25
+
 int main() {
     RunTest("../Test_1.txt", "../test1.csv");
     RunTest("../Test_2.txt", "../test2.csv");
@@ -45,7 +47,7 @@ int main() {
 
 double TempCalcISA(double height) {
     // out of bounds
-    if (height < 0 || height > 25)
+    if (height < 0 || height > HEIGHT_UPPER_BOUND_KM)
         return NAN;
 
     if (height <= TROPOPAUSE_START_POINT)
